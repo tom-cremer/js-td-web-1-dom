@@ -16,8 +16,9 @@ EXERCICE 1 : Afficher dans la console
 - le titre du document
 */
 
-
-
+console.log(document.head);
+console.log(document.body);
+console.log(document.title);
 
 
 // 2. Découvrir le type d'un nœud

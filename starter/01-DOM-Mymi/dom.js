@@ -7,42 +7,64 @@ http://icant.co.uk/articles/domessentials/
 
 /* 1. Cibler l'élément d'id nav */
 
+document.getElementById('nav');
 
 /* 2. Récupérer tous les li */
 
+document.querySelectorAll('li');
 
 /* 3. Cibler le 4e li */
+
+document.querySelector('li:nth-child(3)'); // plus interessant
+document.getElementById('nav').children[3]; // trop de probleme
+document.getElementById('li4'); // pour les faibles
 
 
 /* 4. Compter le nombre de li dans la page */
 
+document.getElementById('nav').children.length;
 
 /* 5. Cibler le premier li pair */
 
+document.querySelector('li:nth-child(odd)');
 
 /* 6. Récupérer tous les li de classe impair */
 
+document.querySelectorAll('.impair');
 
 /* a) afficher ce qu'on obtient */
 
+const impairs = document.querySelectorAll('.impair');
+/*
+for (let i = 0; i < impairs.length; i++) {
+    console.log(impairs[i]);
+}
+*/
+
+for (const impair of impairs) { // Better than for i
+    console.log(impair);
+}
 
 /* b) afficher le 2e li de classe impair */
+
+console.log(impairs[1]);
 
 
 /* c) afficher chacun des li impair */
 
-
+impairs.forEach((e) => {console.log(e)});
 
 /* d) compter le nombre de li de classe impair dans la page */
 
-
+console.log(impairs.length);
 
 /* 7. Cibler le 4e li puis, à partir de là, cibler son frère juste avant lui */
 
-
+console.log(document.querySelector('li:nth-child(4)'));
 
 /* 8. Cibler le 4e li puis, à partir de là, cibler le suivant */
 
+console.log(document.querySelector('li:nth-child(4) + li'));
 
 
 /* 9. Cibler le parent du 4e li */
