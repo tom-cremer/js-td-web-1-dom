@@ -68,38 +68,47 @@ console.log(document.querySelector('li:nth-child(4) + li'));
 
 
 /* 9. Cibler le parent du 4e li */
-
+console.log(document.querySelector('li:nth-child(4) + li').parentNode);
 
 
 /* 10. Récupérer tous les enfants de l'ul */
-
+const ulChild= document.querySelector('ul').children;
 
 /* a) afficher ce qu'on obtient */
+console.log(ulChild);
 
 /* b) cibler le 1er enfant de l'ul */
-
+console.log(ulChild[0]);
 
 /* c) cibler le dernier enfant de l'ul */
 
+console.log(ulChild[5]);
 
 /* c) cibler le 4e enfant de l'ul */
+console.log(ulChild[3]);
 
 
 
 /* 11. Chaînage de méthodes - que retournent les expressions suivantes ? */
 /* a) document.getElementById("nav"). getElementsByTagName("li")[3].firstChild */
 
+console.log("11.A. celle-ci retourne le premier element du 4 eme item de liste dont l'ul a nav comme id");
+console.log(document.getElementById("nav").getElementsByTagName("li")[3].firstChild)
 
-/* b) document. getElementsByTagName("li")[2].childNodes[3].firstChild */
+/* b) document.getElementsByTagName("li")[2].childNodes[3].firstChild */
 
+console.log("11.B. Celui-ci est erroné étant donnée qu'il va chercher un element qui n'existe pas");
+//console.log(document.getElementsByTagName("li")[2].childNodes[3].firstChild)
 
-/* c) document. getElementsByTagName("li")[2].firstChild.firstChild */
+/* c) document.getElementsByTagName("li")[2].firstChild.firstChild */
 
-
+console.log("Prends le premier attribut du 3eme element de la liste d'items")
+console.log(document.getElementsByTagName("li")[2].firstChild.firstChild)
 
 /* 12. Afficher les propriétés (nom du nœud, type de nœud, valeur du nœud) d'un nœud
 */
 /* a) du noeud document.getElementById("nav").getElementsByTagName("li")[3].firstChild */
+
 
 
 /* b) du noeud document.getElementById("nav").getElementsByTagName("a")[2].firstChild */
@@ -108,24 +117,34 @@ console.log(document.querySelector('li:nth-child(4) + li'));
 
 /* 13. Changer le texte "Photos" en "Visuals" */
 
-
+const photosElement = document.querySelector("#li4").firstChild;
+photosElement.textContent = "Visuals";
 
 /* 14. Modifier les attributs d'un élément */
 /* a) Changer la valeur de l'attribut href du lien "Photos" en "photos.php" */
 
+photosElement.href = "photos.php";
 
 /* a) Lui ajouter un attribut title avec la valeur "voir mes photos" */
 
+photosElement.title = "Voir mes photos";
 
 /* 15. Supprimer le dernier li du menu
        (faites-le en utilisant la méthode querySelector pour cible l'ul
         et querySelectorAll pour cibler les li)
 */
 
+const elementList = document.querySelector("#nav").querySelectorAll("li");
 
+console.log(elementList)
 
 /* 16. Ajouter un li à la fin de la liste */
 
+const list = document.querySelector('#nav');
+console.log(list);
+const nouvelElement = document.createElement('li');
+list.appendChild(nouvelElement);
+console.log(list.children);
 
 
 
@@ -134,6 +153,7 @@ console.log(document.querySelector('li:nth-child(4) + li'));
 	- afficher le texte "Bibliographie",
 	- pointer vers la page "biblio.html" et
 	- afficher au survol la boîte de dialogue avec le texte "consulter ma bibliographie"  */
+
 
 
 
