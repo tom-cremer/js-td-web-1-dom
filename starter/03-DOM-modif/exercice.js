@@ -40,12 +40,9 @@ const jeux = [
 
 
 jeux.forEach(jeu => {
-    const paragraphe = document.createElement('li');
+    const paragraphe = document.createElement('p');
     paragraphe.innerHTML = `<b>${jeu.name}</b>: ${jeu.category}`;
     document.body.appendChild(paragraphe);
 });
-
-
-
 
 
