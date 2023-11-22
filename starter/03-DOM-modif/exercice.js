@@ -18,3 +18,34 @@ et un titre "Mes jeux". Écrire le code JS qui
   d'id "jeux" créée dynamiquement qui reprend les jeux suivis de
   leur catégorie entre parenthèses  
   */
+
+const jeux = [
+    {
+        name: "League of Legends",
+        category: "jeu de stratégie/action"
+    },
+    {
+        name: "World of Warcraft",
+        category: "MMORPG (jeu de rôle en ligne massivement multijoueur)"
+    },
+    {
+        name: "Call of Duty - Modern Warfare",
+        category: "FPS (jeu de tir)"
+    },
+    {
+        name: " Fifa 2020",
+        category: "jeu de simulation"
+    }
+];
+
+
+jeux.forEach(jeu => {
+    const paragraphe = document.createElement('li');
+    paragraphe.innerHTML = `<b>${jeu.name}</b>: ${jeu.category}`;
+    document.body.appendChild(paragraphe);
+});
+
+
+
+
+
