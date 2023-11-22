@@ -18,3 +18,28 @@ DOM - PREPA 7 : « Dictionnaire » : construire un dictionnaire
 3. Créer le dictionnaire sur la page web, dans la div d'id "contenu"
 AIDE : utilisez la méthode forEach() pour parcourir le tableau de mots
 */
+
+const mots = [
+    {
+        terme: "Procrastination",
+        definition: "Tendance pathologique à remettre systématiquement au lendemain"
+    },
+    {
+        terme: "Tautologie",
+        definition: "Phrase dont la formulation ne peut être que vraie"
+    },
+    {
+        terme: "Oxymore",
+        definition: "Unit dans un même syntagme deux termes sémantiquement opposés"
+    }
+];
+
+const div = document.getElementById('contenu');
+mots.forEach(mot => {
+    const paragraphe = document.createElement('p');
+    paragraphe.innerHTML = `<b>${mot.terme}</b>: ${mot.definition}`;
+    div.appendChild(paragraphe);
+});
+
+
+
